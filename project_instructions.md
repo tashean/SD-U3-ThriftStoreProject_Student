@@ -35,7 +35,7 @@ You will create each store using a `Factory Method` built within the `Store` cla
     - Consider passing the needed arguments within the method so that a new object can be created.
 
 ### What Can the Store Do?
-When a store is created, it should:
+When a store is created, it should have two methods that:
 - add items to inventory
 - sell items from inventory
 
@@ -68,6 +68,7 @@ This can be any type of item that you'd like. This is a thrift store after all.
 It will need:
 - A **upc**
   - This can be a simple whole number that is unique to it. Feel free to use 1,2,3,etc. however, each created item should represent either as a new type or will be consdiered to update a quantity.
+  - example: A variable will hold the new object. The details of that object will be associated within the `new` Product. If an item has a upc of "1" and the type is "spoon", then any other object created with a upc of "1" will also be a type "spoon". The variable name may be referenced differently within the project to associate individual objects.
 
 ```
 example: 
@@ -83,6 +84,13 @@ A spoon may have a upc of "20". If another spoon is added, it shoudl have the sa
   - This should default as 1; however if an amount is provided upon creation, this should replace the default value.
 - A **market price**
   - This should be considered once it is added to a stores inventory. At creation of the product, this should have no value to it.
+  - When a product is added to a stores inventory, the user should pass it both the object and the desired markup value to associate with it. Within that method, the item should be updated with the new market value that it will eventually be sold for.
+
+example:
+```js
+addToInventory(obj, 0.5) // represents the product and a 50% markup.
+// The method should evaluate the wholesale cost, add the markup and set the new market price so that when it is sold, a profit can be made.
+```
 
 ---
 # Project Requirements
