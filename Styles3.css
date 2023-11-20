@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    height: 100vh;
+    padding-top: 6rem;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/05/38/30/68/1000_F_538306861_rQccAmW2YKxwFr2d1TkQT4RvtOo8Kswn.jpg) ;
+    background-size: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    margin: 0;
+    z-index: 1;
+}
+
+.random-card {
+    display: flex;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    text-align: center;
+}
+
+/* *Display Cards */
+
+#kept-cards {
+    margin: 2rem 2rem;
+    background-color: rgb(255, 255, 255, .75);
+}
+p {
+    text-align: center;
+}
